@@ -38,7 +38,7 @@ El modelo para iniciar sesión es el siguiente:
 }
 ~~~
 ¡IMPORTANTE!
-Compiar el **token** y pegarlo en la sección de **Headers** la opción de **Authorization** verifica que la casilla esté palomeada.
+Copiar el **token** y pegarlo en la sección de **Headers** la opción de **Authorization** verifica que la casilla esté palomeada.
 ### NUEVO POST
 - Hay que tener sesión iniciada para poder crear un nuevo **post**.
 
