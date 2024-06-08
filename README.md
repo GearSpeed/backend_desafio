@@ -5,7 +5,10 @@ Hecho lo anterior luego de instalar las dependencias:
 ~~~
 npm i
 ~~~
-Podrás probar la API con tu **Thunder Client**
+Podrás probar la API con tu **Thunder Client** corriendo primero el servidor con el siguiente comando en tu terminal:
+~~~
+npm run dev
+~~~
 ### REGISTRO DE USUARIOS
 En el método **POST** con el parametro **/user** podrás registrar nuevos usuarios.
 ~~~
