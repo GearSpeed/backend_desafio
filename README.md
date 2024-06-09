@@ -31,7 +31,7 @@ http://localhost:PORT/user/ID
 ### INICIAR SESIÓN
 Con el parámetro **/auth/login** mediante el métdo **POST** podremos obtener un token.
 ~~~
-http://localhost:PORT/user/auth/login
+http://localhost:PORT/auth/login
 ~~~
 El modelo para iniciar sesión es el siguiente:
 ~~~
