@@ -59,6 +59,8 @@ El modelo para ingresar un post es el siguiente:
 ~~~
 La API automáticamente va a enlazar el post al usuario que lo está creando.
 ### LISTAR POSTS
+- No es necesario iniciar sesión para listar **post**.
+
 Tenemos dos formas de listar los posts:
 1. **LISTAR TODOS LOS POSTS:** Para ésto sólo se emplea el método **GET** con el parámetro de **posts**
 ~~~
@@ -67,6 +69,8 @@ http://localhost:PORT/posts
 2. **LISTAR POTS POR TÍTULO:** Podemos filtrar los posts deacuerdo al título.
 En la sección **QUERY** vamos a nombrar el parámetro **search** y en éste parámetro podemos escribir las coincidencias que nos interesan y sólo se listarán los posts cuyos títulos coincidan con nuestra búsqueda.
 ### ACTUALIZAR POSTS
+- Hay que tener sesión iniciada para actualizar un **post**.
+
 Haciendo uso del método **POST** con el parámetro **/posts** seguido del **ID** que nos interesa editar:
 ~~~
 http://localhost:PORT/posts/ID
@@ -81,6 +85,8 @@ El modelo es el mísmo que cuando se crea:
 ~~~
 No se puede cambiar al usuario que creó el post, ése dato si se agrega simplemente se ignora, al ejecutar ésto nos devolverá el post editado junto con la última fecha de actualización.
 ### ELEMINAR POST
+- Hay que tener sesión iniciada para eliminar un **post**.
+
 Con el método **delete** usando el **ID** del post que querémos eliminar podremos realizar la acción.
 ~~~
 http://localhost:PORT/posts/ID
