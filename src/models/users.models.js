@@ -15,6 +15,12 @@ const schema = new mongoose.Schema({
     minLength: 10,
     maxLength: 500,
   },
+  userName: {
+    type: String,
+    required: true,
+    minLength: 2,
+    maxLength: 100,
+  },
   email: {
     type: String,
     required: true,
