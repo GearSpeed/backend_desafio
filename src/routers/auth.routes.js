@@ -8,7 +8,7 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const token = await authUseCase.login(email, password);
-    console.log("Estoy en la API, El Token es:", token);
+
     res.json({
       succes: true,
       data: { token },
