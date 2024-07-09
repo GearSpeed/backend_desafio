@@ -23,6 +23,24 @@ route.post("/", auth, async (req, res) => {
   }
 });
 
+route.get("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const getPostId = await postsUseCase.getById(id);
+    res.json({
+      succes: true,
+      message: "Post finded whit " + id,
+      data: { getPostId },
+    });
+  } catch (error) {
+    res.status(error.status || 500);
+    res.json({
+      succes: false,
+      error: error.message,
+    });
+  }
+});
+
 route.get("/", async (req, res) => {
   try {
     const search = req.query.search;
