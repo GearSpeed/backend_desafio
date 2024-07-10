@@ -26,11 +26,11 @@ route.post("/", auth, async (req, res) => {
 route.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const getPostId = await postsUseCase.getById(id);
+    const post = await postsUseCase.getById(id);
     res.json({
       succes: true,
       message: "Post finded whit " + id,
-      data: { getPostId },
+      data: { post },
     });
   } catch (error) {
     res.status(error.status || 500);
